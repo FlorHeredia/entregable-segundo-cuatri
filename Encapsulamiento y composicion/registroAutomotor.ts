@@ -1,40 +1,28 @@
-class Vehiculo {
-    /*private tipo: Tipo;*/
-    private marca: string;
-    private modelo: number;
-    private patente: string;
+import { Auto } from "./auto";
+import { Moto } from "./moto";
+import { Camion } from "./camion";
 
-constructor (/*tipo: Tipo,*/ marca: string, modelo: number, patente: string){
-    /*this.tipo= tipo;*/
-    this.marca= marca;
-    this.modelo= modelo;
-    this.patente= patente;
+class RegistroAutomotor {
+    private Auto: string;
+    private Moto: string;
+    private Camion: string;
+
+constructor ( auto: string, moto: string,camion: string){
+    this.Auto=auto;
+    this.Moto=moto;
+    this.Camion=camion;
+}
+//metodos get
+getAuto(): string {
+    return this.Auto;
+}
+getMoto(): string{
+    return this.Moto;
+}
+getCamion(): string{
+    return this.Camion;
 }
 
-getMarca(): string {
-    return this.marca;
-}
-setMarca(nuevaMarca: string): void {
-    this.marca = nuevaMarca;
-}
+
 
 }
-
-
-/*class Tipo {
-    private tipo: string;
-
-    constructor(tipoDeVehiculo: string){
-        this.tipo= tipoDeVehiculo;
-    }
-
-    getTipo():string{
-        return this.tipo;
-    }
-}
-
-const tipoVehiculo = new Tipo ("Tipo");*/
-
-const vehiculo1= new Vehiculo( "kawazaki", 2018, "FIN555")
-
-console.log(vehiculo1);
