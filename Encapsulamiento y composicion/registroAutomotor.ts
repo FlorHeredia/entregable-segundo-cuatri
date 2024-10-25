@@ -2,27 +2,45 @@ import { Auto } from "./auto";
 import { Moto } from "./moto";
 import { Camion } from "./camion";
 
-class RegistroAutomotor {
-    private Auto: string;
-    private Moto: string;
-    private Camion: string;
 
-constructor ( auto: string, moto: string,camion: string){
-    this.Auto=auto;
-    this.Moto=moto;
-    this.Camion=camion;
-}
+
+export class RegistroAutomotor {
+    private arrAutos: Auto[];
+    private arrMotos: Moto[];
+    private arrCamiones: Camion[];
+
+    public constructor(autos: Auto[], camiones: Camion[], motos:Moto[] ) {
+        this.arrAutos = autos
+        this.arrCamiones = camiones;
+        this.arrMotos = motos;
+    }
+
+
+    
+    agregarAuto(auto: Auto):void{
+                this.arrAutos.push(auto);
+        }
+    agregarMoto(moto:Moto): void{
+        this.arrMotos.push(moto);
+    }
+    agregarCamion(camion:Camion):void{
+        this.arrCamiones.push(camion)
+    }
+
+  
 //metodos get
-getAuto(): string {
-    return this.Auto;
+getAutos(): Auto [] {
+    return this.arrAutos;
 }
-getMoto(): string{
-    return this.Moto;
+getMotos(): Moto [] {
+    return this.arrMotos;
 }
-getCamion(): string{
-    return this.Camion;
+getCamiones(): Camion [] {
+    return this.arrCamiones;
 }
 
-
-
+//Metodos para eliminar un vehiculo
+public darDeBaja(index: number): void {
+    this.arrAutos.splice(index, 1);
+}
 }

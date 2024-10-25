@@ -3,12 +3,14 @@ export class Auto {
     modelo: number;
     patente: string;
     marca: string;
+  
 
     constructor ( color:string, modelo: number, patente: string, marca:string){
         this.color=color;
         this.modelo=modelo;
         this.patente=patente;
         this.marca=marca;
+       
     }
 
 //metodos get:    
@@ -41,6 +43,3 @@ setMarca(marca:string): void {
 }
 }
 
-const auto1= new Auto ( "rojo", 1999, "FIN555", "Ford");
-
-console.log(auto1);
