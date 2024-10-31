@@ -1,6 +1,6 @@
 import {personajes} from "./personajes";
 
-export class mago extends personajes{
+export class hechicero extends personajes{
     sabiduria: number;
     constructor (nombre:string, nivel:number, puntosDeVida:number, sabiduria:number){
         super(nombre,nivel,puntosDeVida);
@@ -8,7 +8,7 @@ export class mago extends personajes{
  
     }
 
-    //metodos de mago
+    //metodos de hechicero
     hacerTruco():void{
         console.log ("Utilizar truco de invisibilidad");
 
@@ -19,6 +19,13 @@ export class mago extends personajes{
     public setSabiduria(sabiduria:number): void{
         this.sabiduria=sabiduria;
 
-    }        
+    }
+    public atacar(): void{
+        console.log("Lanzar hechizo")
+
+    }
+    public defender(): void{
+        console.log("Utilizar varita mágica")
+    }
 
 }

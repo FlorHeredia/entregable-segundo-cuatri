@@ -18,4 +18,11 @@ getFuerza(): number {
 setFuerza(fuerza:number): void{
    this.fuerza=fuerza;
 }
+public atacar(): void{
+    console.log("Utilizar llave de derribo")
+
+}
+public defender(): void{
+    console.log("Utilizar defensa cuerpo de roca")
+}
 }

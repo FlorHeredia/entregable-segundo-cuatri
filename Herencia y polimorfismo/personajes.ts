@@ -1,11 +1,11 @@
 
 
-export class personajes{
+export abstract class personajes{
     protected nombre: string;
     protected nivel: number;
     protected puntosDeVida: number;
 
-    constructor(nombre:string, nivel:number, puntosDeVida: number){
+    constructor(nombre:string, nivel:number, puntosDeVida:number){
         this.nombre=nombre;
         this.nivel=nivel;
         this.puntosDeVida=puntosDeVida;
@@ -32,11 +32,8 @@ export class personajes{
         this.puntosDeVida=puntosDeVida;
     }
 
-    //otros metodos
-    atacar():void{
-        console.log("¡Activar ataque!");
-    }
-    defender():void{
-        console.log("¡Activar defensa!");
-    }
+    //metodos abstractos para usar polimorfismo
+    abstract atacar():void
+    
+    abstract defender():void
 }

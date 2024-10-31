@@ -18,4 +18,12 @@ export class arquero extends personajes{
  setPunteria(punteria:number):void{
     this.punteria=punteria;
  }
+
+ public atacar(): void{
+   console.log("Atacar con lluvia de flechas")
+
+}
+public defender(): void{
+   console.log("Utilizar esudo de hierro")
+}
 }
