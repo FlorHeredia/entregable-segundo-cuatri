@@ -7,7 +7,7 @@ export class arquero extends personajes{
     this.punteria=punteria;
     }
 
-// metodos de luchador
+// metodos de arquero
 
  lanzarFlecha():void{
     console.log ("Lanzando flecha");
@@ -24,6 +24,6 @@ export class arquero extends personajes{
 
 }
 public defender(): void{
-   console.log("Utilizar esudo de hierro")
+   console.log("Utilizar escudo de hierro")
 }
 }

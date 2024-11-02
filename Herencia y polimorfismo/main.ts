@@ -14,7 +14,21 @@ const luchador2 = new luchador ("Scorpion", 6, 27, 120)
 const arquero1 = new arquero ("Robin Hood", 8, 20, 130)
 const arquero2 = new arquero ("Legolas", 7, 25, 140)
 
-const listaDePersonajes= [hechicero1, hechicero2,luchador1, luchador2,arquero1, arquero2]
+const hechiceros = [hechicero1,hechicero2]
+const luchadores = [luchador1, luchador2]
+const arqueros = [arquero1, arquero2]
 
-//metodos
-listaDePersonajes.agregarPersonaje(hechicero1);
+const listaPersonajes= new listaDePersonajes (hechiceros,luchadores,arqueros)
+
+console.log (listaPersonajes)
+console.log ("------------------------------")
+
+//Crear nuevo hechicero
+const hechicero3 = new hechicero( "Magui", 10, 30, 200)
+//Agregar al arreglo
+listaPersonajes.agregarHechicero(hechicero3);
+console.log ("------------------------------")
+//Mostrar de nuevo el arreglo
+console.log (hechiceros)
+
+console.log (arquero1.atacar)
