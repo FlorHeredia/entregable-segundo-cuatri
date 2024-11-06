@@ -2,7 +2,7 @@ import { hechicero } from "./hechicero";
 import {luchador} from "./luchador";
 import {arquero} from "./arquero";
 import {listaDePersonajes} from "./listaDePersonajes";
-import {personajes} from "./personajes";
+import { arqueroMaster } from "./arqueroMaster";
 
 
 //crear personajes
@@ -29,6 +29,10 @@ const hechicero3 = new hechicero( "Magui", 10, 30, 200)
 listaPersonajes.agregarHechicero(hechicero3);
 console.log ("------------------------------")
 //Mostrar de nuevo el arreglo
-console.log (hechiceros)
+console.log (hechiceros);
+console.log (`El arquero ${arquero1.getNombre()} ataca al hechicero ${hechicero1.getNombre()} utilizando su método:`);
+console.log (arquero1.atacar());
+console.log (`Como su puntería es nivel ${arquero1.getPunteria()} y la sabiduria del hechicero es ${hechicero1.getSabiduria()}, el arquero venció al hechicero. Esto proporcionó que el arquero eleve su nivel a ArqueroMaster`)
 
-console.log (arquero1.atacar)
+const arquero1 = new arqueroMaster ("Robin Hood",10, 30, 130, "Exacta" )
+
