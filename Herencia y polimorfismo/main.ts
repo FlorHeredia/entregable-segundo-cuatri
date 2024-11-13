@@ -11,14 +11,15 @@ const hechicero1 = new hechicero ("Albus Dumbledore", 7, 20, 100)
 const hechicero2 = new hechicero ("Hermione Granger", 9, 25, 80)
 const luchador1 = new luchador ("Zoom cero", 9, 25, 150)
 const luchador2 = new luchador ("Scorpion", 6, 27, 120)
-const arquero1 = new arquero ("Robin Hood", 8, 20, 130)
+let arquero1 = new arquero ("Robin Hood", 8, 20, 130)
 const arquero2 = new arquero ("Legolas", 7, 25, 140)
 
 const hechiceros = [hechicero1,hechicero2]
 const luchadores = [luchador1, luchador2]
 const arqueros = [arquero1, arquero2]
+let arqueroM = [arquero1]
 
-const listaPersonajes= new listaDePersonajes (hechiceros,luchadores,arqueros)
+const listaPersonajes= new listaDePersonajes (hechiceros,luchadores,arqueros, arqueroM)
 
 console.log (listaPersonajes)
 console.log ("------------------------------")
@@ -34,5 +35,6 @@ console.log (`El arquero ${arquero1.getNombre()} ataca al hechicero ${hechicero1
 console.log (arquero1.atacar());
 console.log (`Como su puntería es nivel ${arquero1.getPunteria()} y la sabiduria del hechicero es ${hechicero1.getSabiduria()}, el arquero venció al hechicero. Esto proporcionó que el arquero eleve su nivel a ArqueroMaster`)
 
-const arquero1 = new arqueroMaster ("Robin Hood",10, 30, 130, "Exacta" )
-
+arquero1 = new arqueroMaster ("Robin Hood",10, 30, 130, "Exacta")
+listaPersonajes.agregarArqueroMaster(arquero1)
+console.log (arqueroM)
